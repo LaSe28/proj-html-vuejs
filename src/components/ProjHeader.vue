@@ -9,12 +9,18 @@
     </ul>
     <button>VIEV COURSES</button>
   </div>
+  <MainSec1/>
 </header>
 </template>
 
 <script>
+import MainSec1 from './ProjMain1.vue'
+
 export default {
   name: 'HeaderSec',
+  components: {
+    MainSec1
+  },
   data () {
     return {
       navMenu: [

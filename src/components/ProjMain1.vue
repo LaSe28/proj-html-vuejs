@@ -1,9 +1,9 @@
 <template>
 <div class="container">
-<img src="../assets/img/Books-icon.png" alt="">
-<h2>Thousands of courses for any type of student</h2>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni fugit aspernatur minus ad, dolor et ratione reiciendis unde, necessitatibus quis ab tempora. Debitis dicta beatae obcaecati quis saepe? Aliquid, provident.</p>
-<button>Browse through courses</button>
+  <h1>Key to your success</h1>
+  <p>EduPrime is the most versatile WordPress THeme for educational purposes, showcasing universities, courses, secondary schools etc.</p>
+  <button>search courses</button>
+  <button>Apply for university</button>
 </div>
 </template>
 
