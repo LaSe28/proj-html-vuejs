@@ -64,7 +64,7 @@ export default {
 @import '../assets/styles/partials/_general.scss';
 
 header{
-  background-color: $main-red;
+  background-color: $main-red-tras;
   color: white;
 }
 .nav{

@@ -4,7 +4,7 @@
     <h1>Key to your success</h1>
     <p class="mb-2 mt-2">EduPrime is the most versatile WordPress THeme for educational purposes, showcasing universities, courses, secondary schools etc.</p>
     <div>
-      <button class="mt-1 mr-1 btn btn-y">search courses</button>
+      <button class="mt-1 mr-1 btn btn-y">Search courses</button>
       <button class="mt-1 btn">Apply for university</button>
     </div>
   </div>
