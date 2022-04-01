@@ -1,6 +1,6 @@
 <template>
 <div>
-  <!-- sezione con descrizione degli anni universitari ed eventi futuri con v for -->
+<!-- sezione con corsi e altra descrizione edu -->
 </div>
 </template>
 
