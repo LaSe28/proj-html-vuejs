@@ -1,13 +1,16 @@
 <template>
-<div class="container">
-  <div class="centered mt-2 pt-5 pb-10">
-    <h1>Key to your success</h1>
-    <p class="mb-2 mt-2">EduPrime is the most versatile WordPress THeme for educational purposes, showcasing universities, courses, secondary schools etc.</p>
-    <div>
-      <button class="mt-1 mr-1 btn btn-y">Search courses</button>
-      <button class="mt-1 btn">Apply for university</button>
+<div class=" p-relative">
+  <div class=" container">
+    <div class="centered mt-2 pt-5 pb-10">
+      <h1>Key to your success</h1>
+      <p class="mb-2 mt-2">EduPrime is the most versatile WordPress THeme for educational purposes, showcasing universities, courses, secondary schools etc.</p>
+      <div>
+        <button class="mt-1 mr-1 btn btn-y"><i class="fa-solid fa-magnifying-glass"></i> Search courses</button>
+        <button class="mt-1 btn btn-w"><i class="fa-solid fa-user-plus"></i> Apply for university</button>
+      </div>
     </div>
   </div>
+  <img style="position: absolute; bottom: 0; width: 100%;" src="../assets/img/Wave-1.png" alt="">
 </div>
 </template>
 

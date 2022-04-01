@@ -75,6 +75,10 @@ html{
   margin: auto;
 }
 
+.p-relative{
+  position: relative;
+}
+
 .btn{
   padding: 1rem 1.3rem;
   border-radius: 2rem;
@@ -89,6 +93,11 @@ html{
   background-color: $main-red;
   font-weight: bold;
   color: white;
+}
+.btn-w{
+  background-color: white;
+  font-weight: bold;
+  color: $main-red;
 }
 
 .centered{

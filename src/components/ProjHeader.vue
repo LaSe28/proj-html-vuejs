@@ -4,7 +4,16 @@
     <img src="../assets/img/theme_eduprime_logo.png" alt="">
     <div class="menu-text">
       <ul>
-        <li v-for="(ele, index) in navMenu" :key="index">{{ele.name}}</li>
+        <li class="dropdown-parent ml-1 mr-1" v-for="(ele, index) in navMenu" :key="index">
+          {{ele.name}} <span v-if="ele.dropdown === true"><i @click="ele.dropdown===true? ele.clicked = true : ''" class="fa-solid fa-chevron-down"></i></span>
+          <div :class="ele.clicked === true ? 'show' : '' " class="dropdown">
+            <ul>
+              <li>opzione1 --------------</li>
+              <li>opzione2 --------------</li>
+              <li @click="ele.dropdown===true? ele.clicked = false : ''" >opzione3 --------------</li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </div>
     <button class="btn btn-y">VIEW COURSES</button>
@@ -23,34 +32,42 @@ export default {
   },
   data () {
     return {
+      i: 0,
       navMenu: [
         {
           name: 'Home',
-          dropdown: true
+          dropdown: true,
+          clicked: false
         },
         {
           name: 'Courses',
-          dropdown: true
+          dropdown: true,
+          clicked: false
         },
         {
           name: 'About Us',
-          dropdown: false
+          dropdown: false,
+          clicked: false
         },
         {
           name: 'News',
-          dropdown: true
+          dropdown: true,
+          clicked: false
         },
         {
           name: 'Pages',
-          dropdown: true
+          dropdown: true,
+          clicked: false
         },
         {
           name: 'Contact',
-          dropdown: false
+          dropdown: false,
+          clicked: false
         },
         {
           name: 'Purchase',
-          dropdown: false
+          dropdown: false,
+          clicked: false
         }
       ]
     }
@@ -77,13 +94,50 @@ header{
   ul{
     list-style: none;
     display: flex;
-    li{
-      margin: 1rem;
-    }
   }
   .menu-text{
     display: flex;
   }
+}
+.dropdown-parent{
+  position: relative;
+}
+.dropdown{
+  position: absolute;
+  left: -3rem;
+  width: 250px;
+  background-color: white;
+  color: $main-red;
+  display: none;
+  ul{
+    display: flex;
+    flex-direction: column;
+  }
+  li{
+    padding: 1rem;
+    margin: .3rem;
+  }
+  li:hover{
+    cursor: pointer;
+    background-color: $main-red;
+    color: white;
+  }
+}
+.show{
+  display: block;
+}
+.close-menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -.5rem;
+  right: -.5rem;
+  background-color: white;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  padding: 0.5rem;
 }
 
 </style>
