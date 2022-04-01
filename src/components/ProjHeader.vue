@@ -1,5 +1,7 @@
 <template>
-<header>
+<div>
+<div class="background"></div>
+<header class="p-relative">
   <div class="nav">
     <img src="../assets/img/theme_eduprime_logo.png" alt="">
     <div class="menu-text">
@@ -20,6 +22,7 @@
   </div>
   <MainSec1/>
 </header>
+</div>
 </template>
 
 <script>
@@ -83,6 +86,14 @@ export default {
 header{
   background-color: $main-red-tras;
   color: white;
+}
+.background{
+  background: url(../assets/img/theme_slider2_bg-1.jpg);
+  height: 60%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 0;
 }
 .nav{
   display: flex;
