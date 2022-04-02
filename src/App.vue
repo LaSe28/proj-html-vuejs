@@ -3,6 +3,7 @@
     <HeaderSec/>
     <MainSec2/>
     <SliderSec/>
+    <MainSec3/>
   </div>
 </template>
 
@@ -10,13 +11,15 @@
 import HeaderSec from './components/ProjHeader.vue'
 import MainSec2 from './components/ProjMain2.vue'
 import SliderSec from './components/ProjMainSlider.vue'
+import MainSec3 from './components/ProjMain3.vue'
 
 export default {
   name: 'App',
   components: {
     HeaderSec,
     MainSec2,
-    SliderSec
+    SliderSec,
+    MainSec3
   }
 }
 </script>

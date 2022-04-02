@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="p-relative pb-10">
   <div class="container">
     <div class=" mt-2 centered">
       <h2>Faculties Available at EduPrime</h2>
@@ -22,6 +22,7 @@
       </div>
     </div>
   </div>
+  <img class="mt-2 " style="position: absolute; bottom: -5px; width: 100%;" src="../assets/svg/svg-0.svg" alt="">
 </div>
 </template>
 

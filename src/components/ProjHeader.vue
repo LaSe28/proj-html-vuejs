@@ -140,6 +140,7 @@ header{
 }
 .dropdown{
   position: absolute;
+  z-index: 10;
   left: -3rem;
   width: 250px;
   background-color: white;
