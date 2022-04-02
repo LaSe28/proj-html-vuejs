@@ -1,6 +1,6 @@
 <template>
 <div>
-<div class="background"></div>
+<img class="background" :src="arrSlider[i]" alt="">
 <header class="p-relative">
   <div class="nav">
     <img src="../assets/img/theme_eduprime_logo.png" alt="">
@@ -27,6 +27,9 @@
 
 <script>
 import MainSec1 from './ProjMain1.vue'
+import img1 from '../assets/img/theme_slider1_bg-1.jpg'
+import img2 from '../assets/img/theme_slider2_bg-1.jpg'
+import img3 from '../assets/img/theme_slider3_bg-1.jpg'
 
 export default {
   name: 'HeaderSec',
@@ -36,6 +39,12 @@ export default {
   data () {
     return {
       i: 0,
+      arrSlider: [
+        img1,
+        img2,
+        img3
+
+      ],
       navMenu: [
         {
           name: 'Home',
@@ -74,6 +83,21 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    incIndex () {
+      if (this.i < this.arrSlider.length - 1) {
+        this.i++
+      } else {
+        this.i = 0
+      }
+    },
+    startSlider () {
+      setInterval(this.incIndex, 4000)
+    }
+  },
+  mounted () {
+    this.startSlider()
   }
 
 }
@@ -88,8 +112,6 @@ header{
   color: white;
 }
 .background{
-  background: url(../assets/img/theme_slider2_bg-1.jpg);
-  height: 60%;
   width: 100%;
   position: absolute;
   top: 0;

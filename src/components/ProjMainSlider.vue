@@ -7,7 +7,7 @@
     </div>
   </div>
   <div class="slider-container mt-2 mb-2">
-    <div @click="i = index" :class="i === index ? 'active': '' " class="slider-ele mt-1" v-for="(ele, index) in courses" :key="index">
+    <div @click="i = index" :class="i === index ? 'active': '' " class="slider-ele" v-for="(ele, index) in courses" :key="index">
       <img :src="ele.imgSmall" alt="ele.name">
       <p class="mt-1 " >{{ele.name}}</p>
     </div>
@@ -90,6 +90,7 @@ h3{
 .slider-container{
   display: flex;
   justify-content: center;
+  box-shadow: 3px 0  5px #cecece;
 }
 .slider-ele{
   color: $main-red;
@@ -98,7 +99,7 @@ h3{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid rgba($color: #c1c1c1, $alpha: 0.3);
   width: 200px;
   height: 180px;
   img{
@@ -122,6 +123,5 @@ h3{
   position: absolute;
   bottom: -10px;
   transform: rotate(45deg);
-  z-index: 0;
 }
 </style>
