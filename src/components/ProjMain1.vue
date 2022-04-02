@@ -1,7 +1,7 @@
 <template>
 <div class=" p-relative">
-  <div class=" container">
-    <div class="centered mt-2 pt-5 pb-10">
+  <div class="pb-10 container">
+    <div class="centered mt-2 pt-5">
       <h1>Key to your success</h1>
       <p class="mb-2 mt-2">EduPrime is the most versatile WordPress THeme for educational purposes, showcasing universities, courses, secondary schools etc.</p>
       <div>
@@ -10,7 +10,6 @@
       </div>
     </div>
   </div>
-  <img style="position: absolute; bottom: 0; width: 100%;" src="../assets/img/Wave-1.png" alt="">
 </div>
 </template>
 

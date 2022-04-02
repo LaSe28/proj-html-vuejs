@@ -10,9 +10,9 @@
           {{ele.name}} <span v-if="ele.dropdown === true"><i @click="ele.dropdown===true? ele.clicked = true : ''" class="fa-solid fa-chevron-down"></i></span>
           <div :class="ele.clicked === true ? 'show' : '' " class="dropdown">
             <ul>
-              <li>opzione1 --------------</li>
-              <li>opzione2 --------------</li>
-              <li @click="ele.dropdown===true? ele.clicked = false : ''" >opzione3 --------------</li>
+              <li @click="ele.dropdown===true? ele.clicked = false : ''" >opzione1 --------------</li>
+              <li @click="ele.dropdown===true? ele.clicked = false : ''" >opzione1 --------------</li>
+              <li @click="ele.dropdown===true? ele.clicked = false : ''" >opzione1 --------------</li>
             </ul>
           </div>
         </li>
@@ -21,6 +21,7 @@
     <button class="btn btn-y">VIEW COURSES</button>
   </div>
   <MainSec1/>
+  <img style="position: absolute; bottom: 0; width: 100%;" src="../assets/img/Wave-1.png" alt="">
 </header>
 </div>
 </template>
@@ -110,9 +111,11 @@ export default {
 header{
   background-color: $main-red-tras;
   color: white;
+  height: 70vh;
 }
 .background{
   width: 100%;
+  height: 70vh;
   position: absolute;
   top: 0;
   z-index: 0;

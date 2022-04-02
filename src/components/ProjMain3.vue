@@ -1,6 +1,6 @@
 <template>
 <div>
-  <!-- sezione con descrizione degli anni universitari ed eventi futuri con v for -->
+<img src="../assets/img/home-background.png" alt="">
 </div>
 </template>
 
