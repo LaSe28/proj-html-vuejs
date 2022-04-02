@@ -27,15 +27,16 @@
   </div>
   <div class="centered pb-10 pt-10">
       <img style="width: 50px;" src="../assets/img/upcoming-events-calendar-icon.png" alt="">
-      <h2>Upcoming Events</h2>
-      <div class="events-container">
-        <div class="event p-relative" v-for="ele in arrEvents" :key="ele.type">
+      <h2 class="mb-2 mt-1">Upcoming Events</h2>
+      <div class="mb-2 events-container">
+        <div class="event p-relative" v-for="(ele, index) in arrEvents" :key="index">
           <h3>{{ele.type}}</h3>
           <p><i class="fa-regular fa-calendar"></i> {{ele.date}}</p>
           <p>{{ele.descripion}}</p>
           <button class="btn-r btn"><i class="fa-solid fa-plus"></i> {{ele.textBtn}}</button>
         </div>
       </div>
+      <button class="mt-1 btn btn-y">View All Events</button>
   </div>
 </div>
 </template>
@@ -47,19 +48,19 @@ export default {
     return {
       arrEvents: [
         {
-          type: 'Coaching Sesion',
+          type: 'Coaching Session',
           date: '20 May 21.30',
           descripion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum [...]',
           textBtn: 'Find More'
         },
         {
-          type: 'Coaching Sesion',
+          type: 'Coaching Session',
           date: '24 Mar 18.00',
           descripion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum [...]',
           textBtn: 'Find More'
         },
         {
-          type: 'Coaching Sesion',
+          type: 'Coaching Session',
           date: '12 Feb 13.30',
           descripion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum [...]',
           textBtn: 'Find More'

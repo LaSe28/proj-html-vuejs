@@ -2,7 +2,7 @@
 <div>
 <img class="background" :src="arrSlider[i]" alt="">
 <header class="p-relative">
-  <div class="nav">
+  <div class="p-2 nav">
     <img src="../assets/img/theme_eduprime_logo.png" alt="">
     <div class="menu-text">
       <ul>
@@ -111,11 +111,11 @@ export default {
 header{
   background-color: $main-red-tras;
   color: white;
-  height: 70vh;
+  height:700px;
 }
 .background{
   width: 100%;
-  height: 70vh;
+  height: 700px;
   position: absolute;
   top: 0;
   z-index: 0;
