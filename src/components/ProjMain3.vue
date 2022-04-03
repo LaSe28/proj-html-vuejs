@@ -83,6 +83,9 @@ export default {
   }
   .centered{
     height: 100%;
+    .btn-y:hover{
+      background-color: $main-red-tras;
+    }
   }
 }
 .text-container{

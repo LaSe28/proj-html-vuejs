@@ -22,10 +22,19 @@ export default {
 
 <style scoped lang="scss">
 @import '../assets/styles/partials/_general.scss';
+@import '../assets/styles/partials/_variables.scss';
 
 h1{
   font-size: 3rem;
   font-weight: bold;
+}
+.btn-y:hover{
+  background-color: white;
+  color: $main-red;
+}
+.btn-w:hover{
+  background-color: $main-gold;
+  color: white;
 }
 
 </style>

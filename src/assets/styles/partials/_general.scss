@@ -99,16 +99,24 @@ html{
   padding: 1rem 1.3rem;
   border-radius: 2rem;
   border: none;
+  cursor: pointer;
 }
 .btn-y{
   background-color: $main-gold;
   font-weight: bold;
   color: white;
+  &:hover{
+    background-color: $main-red;
+    color: white;
+  }
 }
 .btn-r{
   background-color: $main-red;
   font-weight: bold;
   color: white;
+  &:hover{
+    background-color: $main-gold;
+  }
 }
 .btn-w{
   background-color: white;

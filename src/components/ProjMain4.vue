@@ -54,28 +54,28 @@ export default {
           teacher: 'James Colins',
           price: '$21.00',
           icon: img1,
-          textBtn: 'Viev Course'
+          textBtn: 'View Course'
         },
         {
           course: 'How to be a speaker',
           teacher: 'James Colins',
           price: 'Free',
           icon: img2,
-          textBtn: 'Viev Course'
+          textBtn: 'View Course'
         },
         {
           course: 'Network Introductios',
           teacher: 'James Colins',
           price: 'Free',
           icon: img3,
-          textBtn: 'Viev Course'
+          textBtn: 'View Course'
         },
         {
           course: 'Brand Management',
           teacher: 'James Colins',
           price: 'Free',
           icon: img4,
-          textBtn: 'Viev Course'
+          textBtn: 'View Course'
         }
       ]
     }

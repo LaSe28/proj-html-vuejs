@@ -134,6 +134,11 @@ header{
   .menu-text{
     display: flex;
   }
+  .btn:hover{
+    background-color: white;
+    color: $main-red;
+
+  }
 }
 .dropdown-parent{
   position: relative;
