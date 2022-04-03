@@ -11,8 +11,8 @@
           <div :class="ele.clicked === true ? 'show' : '' " class="dropdown">
             <ul>
               <li @click="ele.dropdown===true? ele.clicked = false : ''" >opzione1 --------------</li>
-              <li @click="ele.dropdown===true? ele.clicked = false : ''" >opzione1 --------------</li>
-              <li @click="ele.dropdown===true? ele.clicked = false : ''" >opzione1 --------------</li>
+              <li @click="ele.dropdown===true? ele.clicked = false : ''" >opzione2 --------------</li>
+              <li @click="ele.dropdown===true? ele.clicked = false : ''" >opzione3 --------------</li>
             </ul>
           </div>
         </li>
