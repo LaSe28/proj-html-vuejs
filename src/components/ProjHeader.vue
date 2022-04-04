@@ -11,6 +11,11 @@
   <div class="fixed-icon">
     <a href="#top"><i class="fa-solid fa-chevron-up"></i></a>
   </div>
+  <div class="help-fixed">
+    <i id="icon1" @click="toggleClassCart" class="fa-solid fa-cart-shopping"></i>
+    <i id="icon2" @click="toggleClassInfo" class="fa-solid fa-book-open"></i>
+    <i id="icon3" @click="toggleClassHelp" class="fa-solid fa-life-ring"></i>
+  </div>
   <img class="background" :src="arrSlider[i]" alt="">
   <header class="p-relative">
     <div class="p-2 nav">
@@ -19,7 +24,7 @@
         <ul>
           <li class="dropdown-parent ml-1 mr-1"  v-for="(ele, index) in navMenu" :key="index">
             {{ele.name}} <span v-if="ele.dropdown === true"><i @click="ele.dropdown===true? ele.clicked = true : ''" class="fa-solid fa-chevron-down"></i></span>
-            <div :class="ele.clicked === true ? 'show' : '' " class="dropdown">
+            <div v-if="ele.clicked" class="dropdown">
               <ul>
                 <li @click="ele.dropdown===true? ele.clicked = false : ''" >opzione1 --------------</li>
                 <li @click="ele.dropdown===true? ele.clicked = false : ''" >opzione2 --------------</li>
@@ -55,7 +60,6 @@ export default {
         img1,
         img2,
         img3
-
       ],
       navMenu: [
         {
@@ -106,6 +110,15 @@ export default {
     },
     startSlider () {
       setInterval(this.incIndex, 4000)
+    },
+    toggleClassCart () {
+      document.querySelector('#icon1').classList.toggle('cart')
+    },
+    toggleClassInfo () {
+      document.querySelector('#icon2').classList.toggle('info')
+    },
+    toggleClassHelp () {
+      document.querySelector('#icon3').classList.toggle('help')
     }
   },
   mounted () {
@@ -124,6 +137,48 @@ header{
   color: white;
   height:700px;
 }
+.cart::after{
+  content: 'Carrello acquisti';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  padding: 2rem;
+  position: absolute;
+  left: 40px;
+  border-radius: 1rem;
+  background-color: $main-gold;
+  color: $text-blue;
+}
+.info::after{
+  content: 'info';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  padding: 2rem;
+  position: absolute;
+  left: 40px;
+  border-radius: 1rem;
+  background-color: $main-gold;
+  color: $text-blue;
+}
+.help::after{
+  content: 'Help';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  padding: 2rem;
+  position: absolute;
+  left: 40px;
+  border-radius: 1rem;
+  background-color: $main-gold;
+  color: $text-blue;
+}
 .fixed{
   position: fixed;
   bottom: 1rem;
@@ -139,6 +194,7 @@ header{
     padding: 0.4em .5em;
     margin: .5rem;
     background-color: #454545;
+    border-radius: .3rem;
     img{
       height: 15px;
     }
@@ -164,6 +220,27 @@ header{
   border-radius: 50%;
   a{
     color: white;
+  }
+}
+.help-fixed{
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $main-gold;
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  padding: .7rem;
+  color: white;
+  i{
+    margin: 0.7rem 0;
+    &:hover{
+      cursor: pointer;
+      color: $main-red;
+    }
   }
 }
 .background{
@@ -206,7 +283,6 @@ header{
   width: 250px;
   background-color: white;
   color: $main-red;
-  display: none;
   ul{
     display: flex;
     flex-direction: column;
@@ -220,9 +296,6 @@ header{
     background-color: $main-red;
     color: white;
   }
-}
-.show{
-  display: block;
 }
 .close-menu{
   display: flex;

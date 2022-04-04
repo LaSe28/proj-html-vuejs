@@ -33,7 +33,11 @@
           <h3>{{ele.type}}</h3>
           <p><i class="fa-regular fa-calendar"></i> {{ele.date}}</p>
           <p>{{ele.descripion}}</p>
-          <button class="btn-r btn"><i class="fa-solid fa-plus"></i> {{ele.textBtn}}</button>
+          <button @click="ele.clicked = true" class="btn-r btn"><i class="fa-solid fa-plus"></i> {{ele.textBtn}}</button>
+          <div v-if="ele.clicked === true" class="popup">
+            <i  @click="ele.clicked = false" class="fa-solid fa-xmark"></i>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit perspiciatis error distinctio omnis provident cumque vero earum optio eius sunt dolor, quia velit assumenda, fugit accusantium quos voluptas tempora incidunt?
+          </div>
         </div>
       </div>
       <button class="mt-1 btn btn-y">View All Events</button>
@@ -51,19 +55,22 @@ export default {
           type: 'Coaching Session',
           date: '20 May 21.30',
           descripion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum [...]',
-          textBtn: 'Find More'
+          textBtn: 'Find More',
+          clicked: false
         },
         {
           type: 'Coaching Session',
           date: '24 Mar 18.00',
           descripion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum [...]',
-          textBtn: 'Find More'
+          textBtn: 'Find More',
+          clicked: false
         },
         {
           type: 'Coaching Session',
           date: '12 Feb 13.30',
           descripion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum [...]',
-          textBtn: 'Find More'
+          textBtn: 'Find More',
+          clicked: false
         }
       ]
     }
@@ -143,6 +150,20 @@ export default {
       position: absolute;
       bottom: -1rem;
       box-shadow: 0px 1px 5px rgba($color: #000000, $alpha: 0.3)
+    }
+  }
+  .popup{
+    position: absolute;
+    top: 90%;
+    z-index: 100;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 100px 400px rgba($color: #000000, $alpha: 0.3);
+    .fa-solid{
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
     }
   }
 }
