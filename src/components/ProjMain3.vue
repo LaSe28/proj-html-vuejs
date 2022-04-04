@@ -87,6 +87,9 @@ export default {
       background-color: $main-red-tras;
     }
   }
+  h2{
+    font-size: 2rem;
+  }
 }
 .text-container{
   display: flex;

@@ -7,7 +7,7 @@
     <MainSec4/>
     <NewsLetterSec/>
     <PartnersSec/>
-
+    <FooterSec/>
   </div>
 </template>
 
@@ -19,6 +19,7 @@ import MainSec3 from './components/ProjMain3.vue'
 import MainSec4 from './components/ProjMain4.vue'
 import NewsLetterSec from './components/ProjNewsletter.vue'
 import PartnersSec from './components/ProjPartners.vue'
+import FooterSec from './components/ProjFooter.vue'
 
 export default {
   name: 'App',
@@ -29,7 +30,8 @@ export default {
     MainSec3,
     MainSec4,
     NewsLetterSec,
-    PartnersSec
+    PartnersSec,
+    FooterSec
   }
 }
 </script>

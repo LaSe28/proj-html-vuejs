@@ -39,6 +39,9 @@ export default {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      &:focus-within{
+        outline: 3px solid $main-gold;
+      }
       .btn{
         display: flex;
         justify-content: center;

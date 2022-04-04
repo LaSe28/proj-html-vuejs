@@ -64,7 +64,7 @@ export default {
           textBtn: 'View Course'
         },
         {
-          course: 'Network Introductios',
+          course: 'Network Introductions',
           teacher: 'James Colins',
           price: 'Free',
           icon: img3,
