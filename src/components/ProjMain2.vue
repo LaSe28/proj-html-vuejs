@@ -38,6 +38,7 @@ export default {
   background: url(../assets/img/home-background.png);
 }
 .text{
+  color: $text-blue;
   h2{
     font-size: 2.4rem;
     font-weight: bold;

@@ -82,6 +82,9 @@ export default {
 
 <style scoped lang="scss">
 @import '../assets/styles/partials/_general.scss';
+.container{
+  color: $text-blue;
+}
 h2{
   font-size: 2.4rem;
 }

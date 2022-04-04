@@ -17,7 +17,7 @@
       <img src="../assets/img/theme_eduprime_logo.png" alt="">
       <div class="menu-text">
         <ul>
-          <li class="dropdown-parent ml-1 mr-1" v-for="(ele, index) in navMenu" :key="index">
+          <li class="dropdown-parent ml-1 mr-1"  v-for="(ele, index) in navMenu" :key="index">
             {{ele.name}} <span v-if="ele.dropdown === true"><i @click="ele.dropdown===true? ele.clicked = true : ''" class="fa-solid fa-chevron-down"></i></span>
             <div :class="ele.clicked === true ? 'show' : '' " class="dropdown">
               <ul>
@@ -186,6 +186,9 @@ header{
   }
   .menu-text{
     display: flex;
+    &:hover{
+      cursor: pointer;
+    }
   }
   .btn:hover{
     background-color: white;

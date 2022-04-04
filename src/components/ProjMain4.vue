@@ -101,6 +101,7 @@ h2{
   margin: 4rem 1rem;
   height: 220px;
   width: 220px;
+  color: $text-blue;
   box-shadow: 0 1px 6px #ececee;
   img{
     width: 70px;
