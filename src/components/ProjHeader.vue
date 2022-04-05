@@ -17,18 +17,18 @@
     <i id="icon3" @click="toggleClassHelp" class="fa-solid fa-life-ring"></i>
   </div>
   <img class="background" :src="arrSlider[i]" alt="">
-  <header class="p-relative">
+  <header @click="toggleDropdown(null, $event)" class="p-relative">
     <div class="p-2 nav">
       <img src="../assets/img/theme_eduprime_logo.png" alt="">
       <div class="menu-text">
         <ul>
-          <li class="dropdown-parent ml-1 mr-1"  v-for="(ele, index) in navMenu" :key="index">
-            {{ele.name}} <span v-if="ele.dropdown === true"><i @click="ele.dropdown===true? ele.clicked = true : ''" class="fa-solid fa-chevron-down"></i></span>
-            <div v-if="ele.clicked" class="dropdown">
+          <li class="dropdown-parent ml-1 mr-1 toggler" @click="toggleDropdown(index, $event)" v-for="(ele, index) in navMenu" :key="index">
+            {{ele.name}} <span v-if="ele.dropdown === true"><i class="fa-solid fa-chevron-down"></i></span>
+            <div v-if="ele.dropdown === true ? index === navIndex : ''" class="dropdown">
               <ul>
-                <li @click="ele.dropdown===true? ele.clicked = false : ''" >opzione1 --------------</li>
-                <li @click="ele.dropdown===true? ele.clicked = false : ''" >opzione2 --------------</li>
-                <li @click="ele.dropdown===true? ele.clicked = false : ''" >opzione3 --------------</li>
+                <li>opzione1 --------------</li>
+                <li>opzione2 --------------</li>
+                <li>opzione3 --------------</li>
               </ul>
             </div>
           </li>
@@ -55,6 +55,7 @@ export default {
   },
   data () {
     return {
+      navIndex: null,
       i: 0,
       arrSlider: [
         img1,
@@ -110,6 +111,20 @@ export default {
     },
     startSlider () {
       setInterval(this.incIndex, 4000)
+    },
+    toggleDropdown (index, event) {
+      console.log(event)
+      if (event.target.closest('.toggler')) {
+        if (index !== null) {
+          if (this.navIndex === index) {
+            this.navIndex = null
+          } else {
+            this.navIndex = index
+          }
+        }
+      } else {
+        this.navIndex = index
+      }
     },
     toggleClassCart () {
       document.querySelector('#icon1').classList.toggle('cart')
@@ -281,6 +296,7 @@ header{
   z-index: 10;
   left: -3rem;
   width: 250px;
+  border-radius: .5rem;
   background-color: white;
   color: $main-red;
   ul{
@@ -290,6 +306,7 @@ header{
   li{
     padding: 1rem;
     margin: .3rem;
+    border-radius: .5rem;
   }
   li:hover{
     cursor: pointer;
