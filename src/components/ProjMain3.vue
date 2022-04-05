@@ -159,7 +159,7 @@ export default {
     background-color: white;
     border-radius: 1rem;
     padding: 2rem;
-    box-shadow: 0 0 100px 400px rgba($color: #000000, $alpha: 0.3);
+    box-shadow: 0 0 100px 100000px rgba($main-red, $alpha: 0.5);
     .fa-solid{
       position: absolute;
       top: 0.5rem;
