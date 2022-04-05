@@ -34,11 +34,11 @@
         <button class="btn btn-y"><i class="fa-solid fa-search"></i></button>
       </div>
       <div class="categories">
-        <h5 class="mb-1">Search categories</h5>
+        <h5 class="mb-1 mt-2">Search categories</h5>
         <ul>
           <li v-for="(ele, index) in arrMenu3" :key="index">{{ele.toUpperCase()}}</li>
         </ul>
-        <p class="mt-1">ModelTheme. All rights reserved. </p>
+        <p class="mt-2">ModelTheme. All rights reserved. </p>
       </div>
     </div>
   </div>
@@ -138,6 +138,9 @@ export default {
             cursor: pointer;
           }
         }
+      }
+      p{
+        color: $main-gold;
       }
     }
   }

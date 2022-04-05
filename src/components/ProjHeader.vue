@@ -290,6 +290,9 @@ header{
 }
 .dropdown-parent{
   position: relative;
+  &:hover{
+    color: $main-gold;
+  }
 }
 .dropdown{
   position: absolute;
