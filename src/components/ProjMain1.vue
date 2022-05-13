@@ -3,7 +3,7 @@
   <div class="pb-10 container">
     <div class="centered mt-2 pt-5">
       <h1>Key to your success</h1>
-      <p class="mb-2 mt-2">EduPrime is the most versatile WordPress THeme for educational purposes, showcasing universities, courses, secondary schools etc.</p>
+      <p class="mb-2 mt-2">EduPrime is the most versatile WordPress Theme for educational purposes, showcasing universities, courses, secondary schools etc.</p>
       <div>
         <button class="mt-1 mr-1 btn btn-y"><i class="fa-solid fa-magnifying-glass"></i> Search courses</button>
         <button class="mt-1 btn btn-w"><i class="fa-solid fa-user-plus"></i> Apply for university</button>

@@ -1,5 +1,5 @@
 <template>
-<div  id="top">
+<div>
   <div class="fixed">
     <div class="fixed-text">
       <a @click.prevent="" href="#!"><img src="../assets/svg/svg-3.svg" alt="">Purchase Theme</a>
@@ -8,8 +8,8 @@
       <a @click.prevent="" href="#!"><img class="" src="../assets/svg/svg-2.svg" alt="">Related Themes</a>
     </div>
   </div>
-  <div class="fixed-icon">
-    <a href="#top"><i class="fa-solid fa-chevron-up"></i></a>
+  <div  @click="scroll()" class="fixed-icon">
+    <i class="fa-solid fa-chevron-up"></i>
   </div>
   <div class="help-fixed">
     <i id="icon1" @click="toggleClassCart" class="fa-solid fa-cart-shopping"></i>
@@ -134,6 +134,9 @@ export default {
     },
     toggleClassHelp () {
       document.querySelector('#icon3').classList.toggle('help')
+    },
+    scroll () {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   },
   mounted () {
@@ -233,7 +236,7 @@ header{
   width: 35px;
   background-color: $main-gold;
   border-radius: 50%;
-  a{
+  i{
     color: white;
   }
 }
